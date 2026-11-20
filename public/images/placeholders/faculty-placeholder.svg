@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="facBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14243A"/>
+      <stop offset="100%" stop-color="#0E1A2B"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#facBg)"/>
+  <rect x="25" y="25" width="550" height="700" fill="none" stroke="#B79559" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="300" cy="270" r="100" fill="#1C3352" stroke="#B79559" stroke-width="1.5"/>
+  <!-- Faculty Avatar icon -->
+  <path d="M 300 240 A 40 40 0 1 0 300 240.1" fill="#B79559" fill-opacity="0.6"/>
+  <circle cx="300" cy="225" r="38" fill="#B79559" fill-opacity="0.8"/>
+  <path d="M 210 380 C 210 320, 250 300, 300 300 C 350 300, 390 320, 390 380 Z" fill="#B79559" fill-opacity="0.8"/>
+  <rect x="70" y="520" width="460" height="110" rx="4" fill="#08101A" fill-opacity="0.95" stroke="#B79559" stroke-width="1"/>
+  <text x="300" y="565" font-family="Cinzel, serif" font-size="16" font-weight="700" fill="#D8C294" text-anchor="middle" letter-spacing="2">
+    [FACULTY PHOTOGRAPH]
+  </text>
+  <text x="300" y="595" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#FFFFFF" fill-opacity="0.7" text-anchor="middle" letter-spacing="1">
+    PROFILE PENDING ACADEMY DETAILS
+  </text>
+</svg>
+

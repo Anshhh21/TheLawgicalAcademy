@@ -1,26 +1,148 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-navy-950: #08101A;
+  --color-navy-900: #0E1A2B;
+  --color-navy-800: #14243A;
+  --color-navy-700: #1C3352;
+  --color-navy-600: #25446E;
+  
+  --color-ivory-50: #FAF8F3;
+  --color-ivory-100: #F7F3EA;
+  --color-ivory-200: #ECE4D3;
+  --color-ivory-300: #DFCDB2;
+  
+  --color-gold-300: #D8C294;
+  --color-gold-400: #C7AA71;
+  --color-gold-500: #B79559;
+  --color-gold-600: #9E7D42;
+  --color-gold-700: #7E6332;
+
+  --color-charcoal-900: #171717;
+  --color-charcoal-800: #252525;
+  --color-charcoal-700: #3D3D3D;
+  --color-charcoal-600: #575757;
+  --color-charcoal-500: #787878;
+
+  --font-serif: 'Cinzel', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F7F3EA;
+  --foreground: #252525;
+  --primary: #14243A;
+  --accent: #B79559;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Editorial Typography Helpers */
+.font-heading {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Glassmorphism & Reflective Card Styles */
+.glass-dark {
+  background: rgba(20, 36, 58, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(183, 149, 89, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(183, 149, 89, 0.18);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(183, 149, 89, 0.25);
+}
+
+.gold-glow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gold-glow-hover:hover {
+  box-shadow: 0 10px 30px -5px rgba(183, 149, 89, 0.28);
+  border-color: rgba(183, 149, 89, 0.45);
+}
+
+/* Subtle Shimmer for High-End Cards */
+.card-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.card-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(183, 149, 89, 0.08) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.card-shimmer:hover::after {
+  opacity: 1;
+  animation: shine 1.8s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+/* Custom Scrollbar for Sleek Feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0E1A2B;
+}
+::-webkit-scrollbar-thumb {
+  background: #B79559;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C7AA71;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

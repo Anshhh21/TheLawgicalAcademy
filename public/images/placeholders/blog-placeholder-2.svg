@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="b2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14243A"/>
+      <stop offset="100%" stop-color="#0E1A2B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#b2Grad)"/>
+  <rect x="30" y="30" width="1140" height="615" fill="none" stroke="#B79559" stroke-width="1.5" stroke-opacity="0.3"/>
+  <!-- Open Book & Gavel Graphic -->
+  <g transform="translate(600, 310)" stroke="#B79559" stroke-width="2.5" fill="none">
+    <!-- Open Book -->
+    <path d="M 0 40 Q -100 10, -200 30 L -200 -80 Q -100 -100, 0 -70 Q 100 -100, 200 -80 L 200 30 Q 100 10, 0 40 Z" fill="#1C3352" fill-opacity="0.6"/>
+    <line x1="0" y1="-70" x2="0" y2="40"/>
+    <!-- Page lines -->
+    <line x1="-160" y1="-50" x2="-40" y2="-40" stroke-opacity="0.5"/>
+    <line x1="-160" y1="-25" x2="-40" y2="-15" stroke-opacity="0.5"/>
+    <line x1="-160" y1="0" x2="-40" y2="10" stroke-opacity="0.5"/>
+    <line x1="40" y1="-40" x2="160" y2="-50" stroke-opacity="0.5"/>
+    <line x1="40" y1="-15" x2="160" y2="-25" stroke-opacity="0.5"/>
+    <line x1="40" y1="10" x2="160" y2="0" stroke-opacity="0.5"/>
+    <!-- Pen / Quill -->
+    <path d="M -30 -140 L 40 -60 L 30 -50 L -40 -130 Z" fill="#B79559"/>
+  </g>
+  <rect x="380" y="520" width="440" height="60" rx="3" fill="#08101A" fill-opacity="0.9" stroke="#B79559" stroke-width="1"/>
+  <text x="600" y="556" font-family="Cinzel, serif" font-size="16" font-weight="700" fill="#D8C294" text-anchor="middle" letter-spacing="2">
+    JUDICIAL MAINS WRITING STRATEGY
+  </text>
+</svg>
+

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 625" width="100%" height="100%">
+  <defs>
+    <linearGradient id="studBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14243A"/>
+      <stop offset="100%" stop-color="#0E1A2B"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="625" fill="url(#studBg)"/>
+  <rect x="20" y="20" width="460" height="585" fill="none" stroke="#B79559" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="250" cy="230" r="85" fill="#1C3352" stroke="#B79559" stroke-width="1.5"/>
+  <!-- Graduation / Success Icon -->
+  <polygon points="250,180 305,205 250,230 195,205" fill="#B79559"/>
+  <path d="M 215 220 L 215 250 C 215 270, 285 270, 285 250 L 285 220" fill="none" stroke="#B79559" stroke-width="3"/>
+  <circle cx="250" cy="230" r="30" fill="#B79559" fill-opacity="0.3"/>
+  <path d="M 180 340 C 180 290, 210 275, 250 275 C 290 275, 320 290, 320 340 Z" fill="#B79559" fill-opacity="0.5"/>
+  
+  <rect x="50" y="440" width="400" height="95" rx="4" fill="#08101A" fill-opacity="0.9" stroke="#B79559" stroke-width="1"/>
+  <text x="250" y="480" font-family="Cinzel, serif" font-size="14" font-weight="700" fill="#D8C294" text-anchor="middle" letter-spacing="2">
+    [STUDENT SUCCESS PHOTO]
+  </text>
+  <text x="250" y="508" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#FFFFFF" fill-opacity="0.7" text-anchor="middle" letter-spacing="1">
+    SELECTION RECORD PENDING VERIFICATION
+  </text>
+</svg>
+

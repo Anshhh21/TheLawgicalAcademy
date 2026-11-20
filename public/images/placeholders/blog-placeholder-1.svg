@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="b1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1A2B"/>
+      <stop offset="50%" stop-color="#14243A"/>
+      <stop offset="100%" stop-color="#1C3352"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#b1Grad)"/>
+  <rect x="30" y="30" width="1140" height="615" fill="none" stroke="#B79559" stroke-width="1.5" stroke-opacity="0.3"/>
+  <!-- Scales of Justice Graphic -->
+  <g transform="translate(600, 310)" stroke="#B79559" stroke-width="3" fill="none">
+    <line x1="0" y1="-140" x2="0" y2="120"/>
+    <line x1="-180" y1="-80" x2="180" y2="-80"/>
+    <circle cx="0" cy="-140" r="10" fill="#B79559"/>
+    <!-- Left Pan -->
+    <line x1="-180" y1="-80" x2="-220" y2="40"/>
+    <line x1="-180" y1="-80" x2="-140" y2="40"/>
+    <path d="M -230 40 Q -180 90, -130 40 Z" fill="#B79559" fill-opacity="0.3"/>
+    <!-- Right Pan -->
+    <line x1="180" y1="-80" x2="140" y2="40"/>
+    <line x1="180" y1="-80" x2="220" y2="40"/>
+    <path d="M 130 40 Q 180 90, 230 40 Z" fill="#B79559" fill-opacity="0.3"/>
+    <!-- Base -->
+    <path d="M -60 120 L 60 120 L 90 145 L -90 145 Z" fill="#B79559" fill-opacity="0.6"/>
+  </g>
+  <rect x="400" y="520" width="400" height="60" rx="3" fill="#08101A" fill-opacity="0.9" stroke="#B79559" stroke-width="1"/>
+  <text x="600" y="556" font-family="Cinzel, serif" font-size="16" font-weight="700" fill="#D8C294" text-anchor="middle" letter-spacing="2">
+    CRIMINAL LAW REFORM INSIGHTS
+  </text>
+</svg>
+
