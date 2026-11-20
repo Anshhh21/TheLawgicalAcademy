@@ -1,18 +1,19 @@
 import React from 'react';
 import { Navbar } from '@/components/ui/Navbar';
 import { HeroSection } from '@/components/sections/HeroSection';
-import { StatsSection } from '@/components/sections/StatsSection';
-import { AboutSection } from '@/components/sections/AboutSection';
+import { AcademyPhotosSection } from '@/components/sections/AcademyPhotosSection';
+import { AchievementsSection } from '@/components/sections/AchievementsSection';
 import { CoursesSection } from '@/components/sections/CoursesSection';
-import { WhyChooseSection } from '@/components/sections/WhyChooseSection';
 import { FounderSection } from '@/components/sections/FounderSection';
+import { AboutSection } from '@/components/sections/AboutSection';
+import { WhyChooseSection } from '@/components/sections/WhyChooseSection';
 import { FacultySection } from '@/components/sections/FacultySection';
-import { ResultsSection } from '@/components/sections/ResultsSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { KnowledgeHubSection } from '@/components/sections/KnowledgeHubSection';
 import { CtaBanner } from '@/components/sections/CtaBanner';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/ui/Footer';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
 export default function HomePage() {
   return (
@@ -20,44 +21,47 @@ export default function HomePage() {
       {/* Global Sticky Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
+      {/* 1. Hero Section: Black Faded Background, TheLawgicalAcademy transition, Catchy Line, SplitFlapText, SpecularButton */}
       <HeroSection />
 
-      {/* Animated Numerical Statistics & Benchmarks */}
-      <StatsSection />
+      {/* 2. Academy Photo Carousel: CircularCarousel with academy photos */}
+      <AcademyPhotosSection />
 
-      {/* Academy Introduction & Institutional Profile */}
-      <AboutSection />
+      {/* 3. Achievements & Rank Holders: DepthCarousel with achievement photos */}
+      <AchievementsSection />
 
-      {/* Courses & Examination Batches with Reflective Glass Cards */}
+      {/* 4. Courses Offered: ReflectiveCard with Course 1, Course 2, Course 3, Course 4 */}
       <CoursesSection />
 
-      {/* Why Choose The Lawgical Academy Feature Cards */}
-      <WhyChooseSection />
-
-      {/* Founder Spotlight & Teaching Philosophy */}
+      {/* 5. Founder Section: 3D Physics Lanyard with Founder Portrait */}
       <FounderSection />
 
-      {/* Faculty & Judicial Mentorship Team */}
+      {/* 6. Academy Profile & Institutional Philosophy */}
+      <AboutSection />
+
+      {/* 7. Why Choose The Lawgical Academy */}
+      <WhyChooseSection />
+
+      {/* 8. Faculty & Judicial Mentorship */}
       <FacultySection />
 
-      {/* Results & Student Achievement Showcase */}
-      <ResultsSection />
-
-      {/* Testimonials Interactive Carousel */}
+      {/* 9. Testimonials & Student Reviews */}
       <TestimonialsSection />
 
-      {/* Knowledge Hub & Educational Analysis */}
+      {/* 10. Knowledge Hub & Analysis */}
       <KnowledgeHubSection />
 
-      {/* Intermediate Admissions Call To Action */}
+      {/* 11. Intermediate Admissions Banner */}
       <CtaBanner />
 
-      {/* Contact, Location & Admission Enquiry Form */}
+      {/* 12. Contact, Location & Admission Enquiry Form */}
       <ContactSection />
 
-      {/* Academy Global Footer */}
+      {/* 13. Academy Footer (VLS Structure) */}
       <Footer />
+
+      {/* 14. Floating WhatsApp Chat Widget */}
+      <WhatsAppButton />
     </main>
   );
 }

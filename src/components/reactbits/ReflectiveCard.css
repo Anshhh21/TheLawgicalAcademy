@@ -1,0 +1,148 @@
+.reflective-card {
+  --rc-presence: 1;
+  --rc-lift: 0px;
+  --rc-rotate-x: 0deg;
+  --rc-rotate-y: 0deg;
+  position: relative;
+  display: block;
+  perspective: 1000px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  cursor: pointer;
+  opacity: var(--rc-presence);
+  transform: translateY(var(--rc-lift));
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reflective-card__body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--rc-base);
+  box-shadow: var(--rc-shadow);
+  transform: rotateX(var(--rc-rotate-x)) rotateY(var(--rc-rotate-y));
+  transform-style: preserve-3d;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.reflective-card__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reflective-card__video {
+  display: none;
+}
+
+.reflective-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  color: var(--rc-ink);
+  pointer-events: auto;
+}
+
+.reflective-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reflective-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--rc-ink);
+  background: var(--rc-tile);
+  border: 1px solid var(--rc-tile-edge);
+  border-radius: 999px;
+  box-shadow: var(--rc-tile-shadow);
+}
+
+.reflective-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--rc-muted);
+}
+
+.reflective-card__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rc-status, #22c55e);
+  box-shadow: 0 0 8px var(--rc-status, #22c55e);
+}
+
+.reflective-card__main {
+  margin: auto 0;
+}
+
+.reflective-card__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--rc-ink);
+}
+
+.reflective-card__role {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--rc-muted);
+  margin-top: 4px;
+}
+
+.reflective-card__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--rc-tile-edge);
+}
+
+.reflective-card__id {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.reflective-card__id-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--rc-muted);
+}
+
+.reflective-card__id-value {
+  font-family: monospace;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--rc-ink);
+}
+
+.reflective-card__fingerprint {
+  color: var(--rc-muted);
+  opacity: 0.75;
+}
+

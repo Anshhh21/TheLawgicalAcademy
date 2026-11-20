@@ -702,8 +702,8 @@ const stepSimulation = (sim, dt, physics, time) => {
 };
 
 const Lanyard = ({
-  frontImage,
-  backImage,
+  frontImage = undefined,
+  backImage = undefined,
   imageFit = 'cover',
   cardColor = '#ffffff',
   orientation = 'portrait',
@@ -712,7 +712,7 @@ const Lanyard = ({
   size = 0.6,
   anchor = 'center',
   strapLength = 0.5,
-  strapImage,
+  strapImage = undefined,
   strapColor = '#111111',
   strapWidth = 0.65,
   metal = 'silver',
@@ -723,7 +723,7 @@ const Lanyard = ({
   interactive = true,
   intro = true,
   className = '',
-  style
+  style = undefined
 }) => {
   const containerRef = useRef(null);
   const settingsRef = useRef(null);
@@ -1293,3 +1293,4 @@ const Lanyard = ({
 };
 
 export default Lanyard;
+
