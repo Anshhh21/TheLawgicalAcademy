@@ -731,6 +731,9 @@ const CircularCarousel = ({
     if (event.pointerType === 'mouse') {
       state.pointer.inside = true;
       updatePointer(event);
+      // Only pause when hovering directly on an actual carousel card
+      const isOverCard = Boolean(event.target.closest?.('.circular-carousel__card'));
+      state.hover = isOverCard;
     }
     const press = state.press;
     if (!press || press.id !== event.pointerId) {
@@ -790,7 +793,8 @@ const CircularCarousel = ({
 
   const handlePointerEnter = event => {
     if (event.pointerType !== 'mouse') return;
-    stateRef.current.hover = true;
+    // Only pause when hovering directly on a card
+    stateRef.current.hover = Boolean(event.target.closest?.('.circular-carousel__card'));
     wakeRef.current();
   };
 

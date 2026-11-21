@@ -1,98 +1,72 @@
 'use client';
 
 import React from 'react';
-import DepthCarousel from '@/components/reactbits/DepthCarousel';
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { PlaceholderBadge } from '@/components/ui/PlaceholderBadge';
-import { Award, Trophy } from 'lucide-react';
+import CircularCarousel from '@/components/reactbits/CircularCarousel';
 
-const achievementItems = [
+const achievementPhotos = [
   {
-    image: '/images/ach/ach-1.png',
-    alt: 'Judicial Examination Felicitation Ceremony & Rank Qualifiers'
+    src: '/images/ach/ach-1.png',
+    alt: 'Judicial Examination Felicitation & Rank Qualifiers',
+    title: 'Judicial Selections'
   },
   {
-    image: '/images/ach/ach-2.png',
-    alt: 'Merit List Rank Holders — Civil Judge Examination'
+    src: '/images/ach/ach-2.png',
+    alt: 'Merit List Rank Holders — Civil Judge Examination',
+    title: 'Merit Qualifiers'
   },
   {
-    image: '/images/ach/ach-3.png',
-    alt: 'ADPO & Public Prosecution Successful Candidates'
+    src: '/images/ach/ach-3.png',
+    alt: 'ADPO & Public Prosecution Successful Candidates',
+    title: 'Prosecution Ranks'
+  },
+  {
+    src: '/images/ach/ach-4.png',
+    alt: 'Judicial Examination Rank Holder Felicitation',
+    title: 'Rank Felicitation'
+  },
+  {
+    src: '/images/ach/ach-5.png',
+    alt: 'State Judicial Services Qualifiers',
+    title: 'Judicial Officers'
+  },
+  {
+    src: '/images/ach/ach-6.png',
+    alt: 'Celebrating Student Success & Ranks',
+    title: 'Success Celebration'
   }
 ];
 
 export const AchievementsSection: React.FC = () => {
   return (
-    <section id="results" className="py-20 sm:py-28 bg-[#14243A] text-[#FAF8F3] relative overflow-hidden border-t border-[#B79559]/20">
-      {/* Decorative Golden Highlights */}
-      <div className="absolute top-0 right-10 w-96 h-96 bg-[#B79559]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#1C3352]/40 rounded-full blur-3xl pointer-events-none" />
+    <section id="results" className="pt-10 sm:pt-14 pb-20 sm:pb-28 bg-black text-[#FAF8F3] relative z-20 rounded-b-[40px] sm:rounded-b-[64px] border-t border-[#B79559]/20 shadow-[0_25px_50px_rgba(0,0,0,0.85)] overflow-hidden">
+      {/* Clean Minimal Header with Golden Eyebrow Tight to Carousel */}
+      <div className="w-full text-center px-4 mb-1 sm:mb-2 relative z-10">
+        <span className="text-xs uppercase tracking-[0.25em] text-[#B79559] font-bold block mb-1">
+          Selections &amp; Achievements
+        </span>
+        <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white tracking-tight">
+          Hall of Fame
+        </h2>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0E1A2B] border border-[#B79559]/40 text-[#D8C294] text-xs uppercase tracking-widest font-semibold mb-4">
-            <Trophy className="w-3.5 h-3.5 text-[#B79559]" />
-            <span>Legacy of Judicial Selections</span>
-          </div>
-
-          <SectionHeading
-            eyebrow="Hall of Fame & Rank Holders"
-            title="Celebrating Our Judicial Champions"
-            subtitle="Honouring the dedication and relentless pursuit of excellence that propelled our students into the judiciary and public prosecution services."
-            alignment="center"
-            theme="dark"
-          />
-
-          <div className="max-w-md mx-auto mb-8 text-center">
-            <PlaceholderBadge
-              label="Verified Student Rank Holder Photographs & Testimonials Pending Official Release"
-              variant="subtle"
-              className="bg-[#0E1A2B] text-[#D8C294] border-[#B79559]/30 text-xs py-1 px-3"
-            />
-          </div>
-        </div>
-
-        {/* 3D Depth Carousel Container */}
-        <div className="relative w-full py-8 flex flex-col items-center justify-center">
-          <DepthCarousel
-            items={achievementItems}
-            cardWidth={330}
-            cardHeight={440}
-            radius={16}
-            tint="#0E1A2B"
-            depth={240}
-            spread={100}
-            tilt={18}
-            visibleCards={3}
-            autoplay={true}
-            autoplayDelay={4000}
-            showControls={true}
-            showIndicators={true}
-            className="shadow-2xl"
-          />
-        </div>
-
-        {/* Highlights banner below carousel */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="p-5 rounded-lg bg-[#0E1A2B]/80 border border-[#B79559]/30 text-center">
-            <Award className="w-6 h-6 text-[#B79559] mx-auto mb-2" />
-            <h4 className="font-heading text-lg font-bold text-[#D8C294]">Civil Judge Selections</h4>
-            <p className="text-xs text-[#FAF8F3]/70 mt-1">High conversion in Preliminary, Mains, and Interview stages across state judicial services.</p>
-          </div>
-          <div className="p-5 rounded-lg bg-[#0E1A2B]/80 border border-[#B79559]/30 text-center">
-            <Award className="w-6 h-6 text-[#B79559] mx-auto mb-2" />
-            <h4 className="font-heading text-lg font-bold text-[#D8C294]">ADPO &amp; Prosecution Ranks</h4>
-            <p className="text-xs text-[#FAF8F3]/70 mt-1">Specialized coaching delivering top-tier ranks in Assistant District Public Prosecution Officer exams.</p>
-          </div>
-          <div className="p-5 rounded-lg bg-[#0E1A2B]/80 border border-[#B79559]/30 text-center">
-            <Award className="w-6 h-6 text-[#B79559] mx-auto mb-2" />
-            <h4 className="font-heading text-lg font-bold text-[#D8C294]">Mains Answer Distinction</h4>
-            <p className="text-xs text-[#FAF8F3]/70 mt-1">Structured judgment writing and clause analysis enabling consistent high scores in Mains examination.</p>
-          </div>
-        </div>
-
+      {/* Prominent Edge-to-Edge 3D Circular Carousel Positioned Tight Below Heading */}
+      <div className="w-full h-[640px] sm:h-[760px] lg:h-[820px] overflow-hidden relative -mt-4 sm:-mt-8 lg:-mt-12">
+        <CircularCarousel
+          items={achievementPhotos}
+          preset="cylinder"
+          cardWidth={520}
+          aspectRatio={1.35}
+          gap={32}
+          speed={11}
+          autoplay="drift"
+          captions={false}
+          draggable={true}
+          pauseOnHover={true}
+          fadeColor="#000000"
+          depthFade={0.65}
+          cornerRadius={14}
+        />
       </div>
     </section>
   );
 };
-

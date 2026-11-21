@@ -6,7 +6,6 @@ import { Clock, GraduationCap, Check, ArrowUpRight, BookOpen, Layers } from 'luc
 import ReflectiveCard from '@/components/reactbits/ReflectiveCard';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { PlaceholderBadge } from '@/components/ui/PlaceholderBadge';
 
 const coursesList = [
   {
@@ -93,10 +92,10 @@ const coursesList = [
 
 export const CoursesSection: React.FC = () => {
   return (
-    <section id="courses" className="py-20 sm:py-28 bg-[#101E31] text-[#FAF8F3] relative overflow-hidden border-t border-[#B79559]/20">
+    <section id="courses" className="py-20 sm:py-28 bg-black text-[#FAF8F3] relative overflow-hidden border-t border-[#B79559]/20">
       {/* Background accents */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#B79559]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#1C3352]/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-96 h-96 bg-black/50 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -107,15 +106,6 @@ export const CoursesSection: React.FC = () => {
           alignment="center"
           theme="dark"
         />
-
-        {/* Global Courses Status Notice */}
-        <div className="max-w-xl mx-auto mb-12 text-center">
-          <PlaceholderBadge
-            label="[COURSE DETAILS TO BE CONFIRMED — CURRICULA & FEES PENDING OFFICIAL RELEASE]"
-            variant="subtle"
-            className="bg-[#0A1320] text-[#D8C294] border-[#B79559]/30 py-1.5 px-4 text-xs font-semibold"
-          />
-        </div>
 
         {/* Course Cards Grid using ReflectiveCard */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
@@ -138,7 +128,7 @@ export const CoursesSection: React.FC = () => {
                   {/* Top Badges */}
                   <div>
                     <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                      <span className="text-xs font-black uppercase tracking-widest text-[#0A1320] bg-[#B79559] px-3 py-1 rounded-sm">
+                      <span className="text-xs font-black uppercase tracking-widest text-black bg-[#B79559] px-3 py-1 rounded-sm">
                         {course.code}
                       </span>
                       <span className="text-xs font-medium text-[#D8C294] tracking-wide">
@@ -155,7 +145,7 @@ export const CoursesSection: React.FC = () => {
                     </p>
 
                     {/* Duration & Mode Meta */}
-                    <div className="grid grid-cols-2 gap-3 my-4 p-3 rounded-lg bg-[#0E1A2B]/80 border border-white/10 text-xs">
+                    <div className="grid grid-cols-2 gap-3 my-4 p-3 rounded-lg bg-neutral-950/80 border border-white/10 text-xs">
                       <div className="flex items-center gap-2 text-white/80">
                         <Clock className="w-4 h-4 text-[#B79559] shrink-0" />
                         <div>
@@ -224,7 +214,7 @@ export const CoursesSection: React.FC = () => {
         </div>
 
         {/* Bottom Curriculum Advisory Notice */}
-        <div className="mt-12 p-4 rounded-lg bg-[#0E1A2B] border border-[#B79559]/30 text-center max-w-3xl mx-auto">
+        <div className="mt-12 p-4 rounded-lg bg-neutral-950 border border-[#B79559]/30 text-center max-w-3xl mx-auto">
           <p className="text-xs text-white/70">
             <span className="text-[#D8C294] font-semibold">Specialized Batches:</span> Additional state-specific local laws (UP, Rajasthan, Delhi, Bihar, Haryana) and customized one-on-one judicial interview preparation modules are available upon admissions consultation.
           </p>

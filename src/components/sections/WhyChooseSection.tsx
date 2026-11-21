@@ -13,7 +13,6 @@ import {
 } from 'lucide-react';
 import { whyChooseData } from '@/data/whyChooseData';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { PlaceholderBadge } from '@/components/ui/PlaceholderBadge';
 
 const iconMap: Record<string, LucideIcon> = {
   BookOpenCheck,
@@ -26,7 +25,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export const WhyChooseSection: React.FC = () => {
   return (
-    <section id="why-lawgical" className="py-20 sm:py-28 bg-[#FAF8F3] relative">
+    <section id="why-lawgical" className="py-20 sm:py-24 bg-black text-[#FAF8F3] relative border-t border-[#B79559]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeading
@@ -34,19 +33,11 @@ export const WhyChooseSection: React.FC = () => {
           title="Why Choose The Lawgical Academy"
           subtitle="A disciplined legal academy model designed to eliminate ambiguity, hone interpretive clarity, and build exam-hall temperament."
           alignment="center"
+          theme="dark"
         />
 
-        {/* Global section notice */}
-        <div className="text-center mb-10">
-          <PlaceholderBadge
-            label="Methodology & Services Represent Proposed Academic Framework Pending Formal Adoption"
-            variant="subtle"
-            className="text-xs"
-          />
-        </div>
-
         {/* 6 Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {whyChooseData.map((item, index) => {
             const Icon = iconMap[item.iconName] || BookOpenCheck;
 
@@ -57,43 +48,34 @@ export const WhyChooseSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="bg-[#FFFFFF] p-8 rounded-sm border border-[#14243A]/10 hover:border-[#B79559] hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
+                className="bg-neutral-950 p-7 rounded-xl border border-[#B79559]/25 hover:border-[#B79559] hover:shadow-2xl transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
-                  {/* Icon and Accent */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-sm bg-[#14243A] text-[#B79559] flex items-center justify-center group-hover:bg-[#B79559] group-hover:text-[#0A1320] transition-colors">
-                      <Icon className="w-6 h-6" />
+                  {/* Icon and Accent Number */}
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-11 h-11 rounded-lg bg-black border border-[#B79559]/40 text-[#B79559] flex items-center justify-center group-hover:bg-[#B79559] group-hover:text-black transition-colors">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-xs font-mono text-[#B79559]/70 font-semibold">
+                    <span className="font-heading text-xl text-[#B79559] font-black tracking-wider">
                       0{index + 1}
                     </span>
                   </div>
 
-                  {/* Feature Title */}
-                  <h3 className="font-heading text-lg font-bold text-[#14243A] group-hover:text-[#9E7D42] transition-colors leading-snug">
-                    {item.title}
+                  {/* Clean Number Heading */}
+                  <h3 className="font-heading text-lg font-bold text-white group-hover:text-[#D8C294] transition-colors leading-snug">
+                    0{index + 1}
                   </h3>
 
-                  {/* Feature Description */}
-                  <p className="mt-3 text-sm text-[#252525]/75 leading-relaxed font-light">
-                    {item.description}
-                  </p>
-                </div>
-
-                {/* Card Bottom Placeholder Note */}
-                <div className="mt-6 pt-4 border-t border-[#14243A]/5">
-                  <span className="text-[11px] text-[#7E6332] font-mono block">
-                    [PROPOSED METHODOLOGY — EDITABLE]
-                  </span>
+                  {/* Unfilled Box Placeholder */}
+                  <div className="mt-4 h-16 w-full rounded border border-dashed border-[#FAF8F3]/15 bg-black/50 flex items-center px-3.5">
+                    <span className="text-xs text-white/30 italic">Details to be updated</span>
+                  </div>
                 </div>
               </motion.div>
             );
           })}
         </div>
-
       </div>
     </section>
   );
 };
-

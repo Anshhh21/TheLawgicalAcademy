@@ -1,18 +1,18 @@
 import { ContactInfo } from '@/types';
 
 export const contactData: ContactInfo = {
-  phonePrimary: '[CONTACT NUMBER PENDING]',
-  phoneSecondary: '[ADDITIONAL PHONE PENDING]',
-  whatsappNumber: '[WHATSAPP NUMBER TO BE PROVIDED]',
+  phonePrimary: '+91 95002 07811',
+  phoneSecondary: '+91 95000 25216',
+  whatsappNumber: '+919500207811',
   whatsappMessage: 'Hello, I would like to enquire about admission and course batches at The Lawgical Academy.',
-  emailPrimary: 'info@thelawgicalacademy.placeholder',
-  emailEnquiries: 'admissions@thelawgicalacademy.placeholder',
-  addressLine1: '[CAMPUS BUILDING / STREET ADDRESS PENDING]',
-  addressLine2: '[LOCALITY / LANDMARK PENDING]',
-  cityStateZip: '[CITY, STATE, PIN CODE PENDING]',
+  emailPrimary: 'info@thelawgicalacademy.in',
+  emailEnquiries: 'admissions@thelawgicalacademy.in',
+  addressLine1: 'Academy Campus Address',
+  addressLine2: 'To be updated upon confirmation',
+  cityStateZip: 'India',
   operatingHours: 'Monday – Saturday: 9:00 AM – 7:00 PM (Sunday Closed)',
   googleMapsUrl: 'https://maps.google.com',
-  googleMapsEmbedQuery: 'Indore, Madhya Pradesh', // Sensible regional legal hub placeholder for map display
+  googleMapsEmbedQuery: 'Indore, Madhya Pradesh',
   socials: {
     youtube: '#',
     telegram: '#',

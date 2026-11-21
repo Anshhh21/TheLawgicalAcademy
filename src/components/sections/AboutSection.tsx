@@ -3,17 +3,16 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Target, Compass, CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, Target, Compass, ArrowRight } from 'lucide-react';
 import { academyData } from '@/data/academyData';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { PlaceholderBadge } from '@/components/ui/PlaceholderBadge';
 
 export const AboutSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'mission' | 'vision' | 'methodology'>('mission');
 
   return (
-    <section id="about" className="py-20 sm:py-28 bg-[#F7F3EA] relative">
+    <section id="about" className="py-20 sm:py-28 bg-black text-[#FAF8F3] relative border-t border-[#B79559]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeading
@@ -21,11 +20,12 @@ export const AboutSection: React.FC = () => {
           title="About The Lawgical Academy"
           subtitle="Sculpting discerning legal minds through disciplined statutory analysis, ethical grounding, and competitive judicial acumen."
           alignment="center"
+          theme="dark"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mt-6">
           
-          {/* Left Column: Visual Composition with Placeholder Framer */}
+          {/* Left Column: Visual Composition */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -38,34 +38,35 @@ export const AboutSection: React.FC = () => {
               <div className="absolute -top-3 -left-3 w-24 h-24 border-t-2 border-l-2 border-[#B79559]" />
               <div className="absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-[#B79559]" />
 
-              <div className="relative bg-[#0E1A2B] rounded-sm p-3 shadow-xl border border-[#B79559]/30">
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xs bg-[#14243A]">
+              <div className="relative bg-neutral-950 rounded-sm p-3 shadow-xl border border-[#B79559]/30">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xs bg-[#0D0D0D]">
                   <Image
                     src="/images/placeholders/faculty-placeholder.svg"
                     alt="The Lawgical Academy Campus & Classrooms"
                     fill
                     className="object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                   
-                  {/* Overlay Plaque */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-[#0A1320]/90 backdrop-blur-md p-4 rounded border border-[#B79559]/40">
-                    <p className="font-heading text-xs uppercase tracking-widest text-[#D8C294] font-bold">
-                      Campus Infrastructure
+                  {/* Photo Caption Badge */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-black/90 backdrop-blur-md p-4 rounded border border-[#B79559]/40">
+                    <p className="text-xs font-semibold text-[#D8C294]">
+                      Campus Infrastructure &amp; Classrooms
                     </p>
-                    <p className="text-[11px] text-[#FAF8F3]/70 mt-1">
-                      [Classroom & Library Facility Photographs Will Replace This Slot]
+                    <p className="text-[11px] text-[#FAF8F3]/60 mt-0.5">
+                      Dedicated legal research center and moot halls
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Floating Stat card */}
-              <div className="absolute -bottom-6 -right-4 sm:-right-6 bg-[#FAF8F3] border border-[#B79559]/50 p-4 rounded shadow-lg max-w-[220px]">
+              <div className="absolute -bottom-6 -right-4 sm:-right-6 bg-neutral-950 border border-[#B79559]/50 p-4 rounded shadow-2xl max-w-[220px]">
                 <p className="text-xs uppercase tracking-wider text-[#B79559] font-bold">
                   Curriculum Focus
                 </p>
-                <p className="text-xs text-[#252525] mt-1 font-medium leading-snug">
-                  Judicial Services & Public Prosecution Examination Standards
+                <p className="text-xs text-[#FAF8F3] mt-1 font-medium leading-snug">
+                  Judicial Services &amp; Public Prosecution Examination Standards
                 </p>
               </div>
             </div>
@@ -80,16 +81,16 @@ export const AboutSection: React.FC = () => {
             className="lg:col-span-7 space-y-6"
           >
             <div className="space-y-4">
-              <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#14243A]">
+              <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white">
                 {academyData.aboutTitle}
               </h3>
               
-              <p className="text-[#252525]/85 leading-relaxed text-base">
+              <p className="text-[#FAF8F3]/80 leading-relaxed text-base">
                 {academyData.aboutP1}
               </p>
 
-              <div className="p-4 rounded-sm bg-[#14243A]/5 border-l-4 border-[#B79559]">
-                <p className="text-xs sm:text-sm text-[#252525]/80 italic">
+              <div className="p-4 rounded-sm bg-neutral-950 border-l-4 border-[#B79559]">
+                <p className="text-xs sm:text-sm text-[#D8C294] italic">
                   {academyData.aboutP2}
                 </p>
               </div>
@@ -97,13 +98,13 @@ export const AboutSection: React.FC = () => {
 
             {/* Interactive Philosophy Tabs */}
             <div className="pt-2">
-              <div className="flex border-b border-[#14243A]/15 gap-4">
+              <div className="flex border-b border-white/10 gap-4">
                 <button
                   onClick={() => setActiveTab('mission')}
                   className={`pb-3 text-xs sm:text-sm uppercase tracking-wider font-semibold transition-all relative ${
                     activeTab === 'mission'
-                      ? 'text-[#14243A]'
-                      : 'text-[#252525]/50 hover:text-[#14243A]'
+                      ? 'text-[#D8C294]'
+                      : 'text-white/50 hover:text-white'
                   }`}
                 >
                   Our Mission
@@ -115,8 +116,8 @@ export const AboutSection: React.FC = () => {
                   onClick={() => setActiveTab('vision')}
                   className={`pb-3 text-xs sm:text-sm uppercase tracking-wider font-semibold transition-all relative ${
                     activeTab === 'vision'
-                      ? 'text-[#14243A]'
-                      : 'text-[#252525]/50 hover:text-[#14243A]'
+                      ? 'text-[#D8C294]'
+                      : 'text-white/50 hover:text-white'
                   }`}
                 >
                   Our Vision
@@ -128,8 +129,8 @@ export const AboutSection: React.FC = () => {
                   onClick={() => setActiveTab('methodology')}
                   className={`pb-3 text-xs sm:text-sm uppercase tracking-wider font-semibold transition-all relative ${
                     activeTab === 'methodology'
-                      ? 'text-[#14243A]'
-                      : 'text-[#252525]/50 hover:text-[#14243A]'
+                      ? 'text-[#D8C294]'
+                      : 'text-white/50 hover:text-white'
                   }`}
                 >
                   Pedagogy Pillars
@@ -144,7 +145,7 @@ export const AboutSection: React.FC = () => {
                 {activeTab === 'mission' && (
                   <div className="flex items-start gap-3">
                     <Target className="w-5 h-5 text-[#B79559] shrink-0 mt-0.5" />
-                    <p className="text-sm text-[#252525]/85 leading-relaxed">
+                    <p className="text-sm text-[#FAF8F3]/85 leading-relaxed">
                       {academyData.missionStatement}
                     </p>
                   </div>
@@ -153,14 +154,14 @@ export const AboutSection: React.FC = () => {
                 {activeTab === 'vision' && (
                   <div className="flex items-start gap-3">
                     <Compass className="w-5 h-5 text-[#B79559] shrink-0 mt-0.5" />
-                    <p className="text-sm text-[#252525]/85 leading-relaxed">
+                    <p className="text-sm text-[#FAF8F3]/85 leading-relaxed">
                       {academyData.visionStatement}
                     </p>
                   </div>
                 )}
 
                 {activeTab === 'methodology' && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-[#252525]/85">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-[#FAF8F3]/85">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-[#B79559]" />
                       <span>Exhaustive Bare Act Clause Reading</span>
@@ -175,24 +176,19 @@ export const AboutSection: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-[#B79559]" />
-                      <span>Local & Minor Acts Special Focus</span>
+                      <span>Local &amp; Minor Acts Special Focus</span>
                     </div>
                   </div>
                 )}
               </div>
             </div>
 
-            {/* Actions & Notice */}
+            {/* Actions */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
-              <Button href="#courses" variant="primary" icon={<ArrowRight className="w-4 h-4" />}>
+              <Button href="#courses" variant="gold" icon={<ArrowRight className="w-4 h-4" />}>
                 Explore Programs
               </Button>
-              <PlaceholderBadge
-                label="Full Academy History Pending Verification"
-                variant="subtle"
-              />
             </div>
-
           </motion.div>
 
         </div>
@@ -200,4 +196,3 @@ export const AboutSection: React.FC = () => {
     </section>
   );
 };
-

@@ -129,14 +129,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0E1A2B;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #B79559;
+  background: #262626;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C7AA71;
+  background: #B79559;
 }
 
 /* Accessibility: Respect Reduced Motion */

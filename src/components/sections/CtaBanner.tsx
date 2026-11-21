@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/Button';
 
 export const CtaBanner: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-[#0E1A2B] via-[#14243A] to-[#0E1A2B] border-y border-[#B79559]/30 py-16 text-[#FAF8F3] relative overflow-hidden">
+    <section className="bg-black border-y border-[#B79559]/30 py-16 text-[#FAF8F3] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#08101A] border border-[#B79559]/40 text-[#D8C294] text-xs uppercase tracking-widest font-semibold">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D0D0D] border border-[#B79559]/40 text-[#D8C294] text-xs uppercase tracking-widest font-semibold">
           <Scale className="w-3.5 h-3.5 text-[#B79559]" />
           <span>New Batches Commencing Soon</span>
         </div>

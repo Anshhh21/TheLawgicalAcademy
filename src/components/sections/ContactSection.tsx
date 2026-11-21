@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  MapPin,
   Phone,
   Mail,
   Clock,
@@ -28,14 +27,13 @@ export const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In UI prototype mode, simulate successful enquiry submission
     setFormSubmitted(true);
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 bg-[#101E31] text-[#FAF8F3] relative overflow-hidden">
-      {/* Decorative Blur */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#B79559]/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="contact" className="py-20 sm:py-28 bg-[#FAF8F3] text-[#14243A] relative overflow-hidden border-t border-black/5">
+      {/* Subtle Golden Glow */}
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#B79559]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -44,12 +42,12 @@ export const ContactSection: React.FC = () => {
           title="Connect with The Lawgical Academy"
           subtitle="Take the definitive first step toward judicial appointment. Inquire about batch schedules, fee structures, and personalized mentorship."
           alignment="center"
-          theme="dark"
+          theme="light"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
-          {/* Left Column: Academy Contact Information & Location Showcase */}
+          {/* Left Column: Academy Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -57,75 +55,55 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="bg-[#14243A] rounded-sm p-6 sm:p-8 border border-[#B79559]/30 shadow-xl space-y-6">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-neutral-200/90 shadow-lg space-y-6">
               <div>
-                <h3 className="font-heading text-xl font-bold text-[#D8C294]">
+                <h3 className="font-heading text-xl font-bold text-[#14243A]">
                   Academy Admissions Desk
                 </h3>
-                <p className="text-xs text-[#FAF8F3]/70 mt-1">
+                <p className="text-xs text-neutral-600 mt-1">
                   Counselors and academic mentors are available for guidance.
                 </p>
               </div>
 
               {/* Contact Details List */}
-              <div className="space-y-4 pt-2">
+              <div className="space-y-5 pt-1">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-sm bg-[#0E1A2B] border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] uppercase tracking-wider text-[#B79559] font-bold block">
-                      Campus Location
-                    </span>
-                    <p className="text-sm text-[#FAF8F3]/90 mt-0.5 leading-snug">
-                      {contactData.addressLine1}
-                    </p>
-                    <p className="text-xs text-[#FAF8F3]/60 mt-0.5">
-                      {contactData.cityStateZip}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-sm bg-[#0E1A2B] border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-neutral-100 border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider text-[#B79559] font-bold block">
+                    <span className="text-[11px] uppercase tracking-wider text-[#8B6E38] font-bold block">
                       Telephone / Helpdesk
                     </span>
-                    <p className="text-sm text-[#FAF8F3]/90 mt-0.5 font-mono">
-                      {contactData.phonePrimary}
-                    </p>
-                    <p className="text-xs text-[#FAF8F3]/60 mt-0.5 font-mono">
-                      {contactData.phoneSecondary}
+                    <p className="text-xs text-neutral-400 italic mt-1">
+                      Contact numbers to be updated
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-sm bg-[#0E1A2B] border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-neutral-100 border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider text-[#B79559] font-bold block">
+                    <span className="text-[11px] uppercase tracking-wider text-[#8B6E38] font-bold block">
                       Electronic Mail
                     </span>
-                    <p className="text-sm text-[#FAF8F3]/90 mt-0.5">
-                      {contactData.emailEnquiries}
+                    <p className="text-xs text-neutral-400 italic mt-1">
+                      Official email to be updated
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-sm bg-[#0E1A2B] border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-neutral-100 border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider text-[#B79559] font-bold block">
+                    <span className="text-[11px] uppercase tracking-wider text-[#8B6E38] font-bold block">
                       Working Hours
                     </span>
-                    <p className="text-sm text-[#FAF8F3]/90 mt-0.5 leading-snug">
+                    <p className="text-sm text-[#14243A] font-medium mt-0.5 leading-snug">
                       {contactData.operatingHours}
                     </p>
                   </div>
@@ -133,39 +111,19 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* WhatsApp Quick Connect Button */}
-              <div className="pt-4 border-t border-[#FAF8F3]/10">
+              <div className="pt-4 border-t border-neutral-100">
                 <Button
                   href={`https://wa.me/?text=${encodeURIComponent(contactData.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="gold"
-                  className="w-full justify-center bg-[#25D366] text-[#0A1320] hover:bg-[#1EBE5D] border-none font-semibold"
+                  className="w-full justify-center bg-[#25D366] text-[#0A1320] hover:bg-[#1EBE5D] border-none font-semibold shadow-md"
                   icon={<MessageSquare className="w-4 h-4" />}
                 >
                   Connect via WhatsApp Desk
                 </Button>
-                <p className="text-[10px] text-center text-[#FAF8F3]/50 mt-2">
+                <p className="text-[10px] text-center text-neutral-400 mt-2">
                   * Opens WhatsApp with pre-filled admission query
-                </p>
-              </div>
-            </div>
-
-            {/* Google Maps / Campus Placeholder Card */}
-            <div className="bg-[#14243A] rounded-sm p-4 border border-[#B79559]/30">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs uppercase tracking-wider text-[#D8C294] font-semibold flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5" />
-                  Campus Map Link
-                </span>
-                <span className="text-[10px] text-[#FAF8F3]/60">Placeholder Frame</span>
-              </div>
-              <div className="relative aspect-[16/9] w-full rounded bg-[#08101A] border border-[#FAF8F3]/10 flex flex-col items-center justify-center text-center p-4">
-                <MapPin className="w-8 h-8 text-[#B79559] mb-2 animate-bounce" />
-                <p className="text-xs font-semibold text-[#FAF8F3]">
-                  {contactData.addressLine1}
-                </p>
-                <p className="text-[11px] text-[#FAF8F3]/60 mt-1">
-                  Interactive Google Map embed will activate upon official address verification.
                 </p>
               </div>
             </div>
@@ -180,39 +138,39 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-7"
           >
-            <div className="bg-[#14243A] rounded-sm p-6 sm:p-10 border border-[#B79559]/30 shadow-2xl">
+            <div className="bg-white rounded-2xl p-6 sm:p-10 border border-neutral-200/90 shadow-lg">
               <div className="mb-8">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-heading text-2xl font-bold text-[#FAF8F3]">
+                  <h3 className="font-heading text-2xl font-bold text-[#14243A]">
                     Submit Admission Enquiry
                   </h3>
                   <PlaceholderBadge
                     label="Active UI Form"
                     variant="pill"
-                    className="bg-[#B79559]/20 text-[#D8C294] border-[#B79559]/40"
+                    className="bg-[#B79559]/15 text-[#8B6E38] border-[#B79559]/40"
                   />
                 </div>
-                <p className="text-xs sm:text-sm text-[#FAF8F3]/70 mt-1">
+                <p className="text-xs sm:text-sm text-neutral-600 mt-1">
                   Fill in your academic profile to receive detailed course prospectuses and schedule an orientation session.
                 </p>
               </div>
 
               {formSubmitted ? (
-                <div className="p-8 rounded-sm bg-[#0E1A2B] border border-[#B79559] text-center space-y-4">
+                <div className="p-8 rounded-xl bg-neutral-50 border border-[#B79559] text-center space-y-4">
                   <div className="w-14 h-14 rounded-full bg-[#B79559]/20 text-[#B79559] flex items-center justify-center mx-auto">
                     <CheckCircle className="w-8 h-8" />
                   </div>
-                  <h4 className="font-heading text-xl font-bold text-[#D8C294]">
+                  <h4 className="font-heading text-xl font-bold text-[#14243A]">
                     Enquiry Registered Successfully
                   </h4>
-                  <p className="text-xs sm:text-sm text-[#FAF8F3]/80 max-w-md mx-auto leading-relaxed">
-                    Thank you, <span className="text-[#D8C294] font-medium">{formData.fullName || 'Candidate'}</span>. In this prototype preview, this form validates your input and demonstrates the admissions capture interface.
+                  <p className="text-xs sm:text-sm text-neutral-600 max-w-md mx-auto leading-relaxed">
+                    Thank you, <span className="text-[#8B6E38] font-bold">{formData.fullName || 'Candidate'}</span>. In this prototype preview, this form validates your input and demonstrates the admissions capture interface.
                   </p>
                   <Button
                     onClick={() => setFormSubmitted(false)}
                     variant="outline"
                     size="sm"
-                    className="text-[#D8C294] border-[#D8C294]"
+                    className="text-[#14243A] border-[#14243A]"
                   >
                     Submit Another Query
                   </Button>
@@ -221,7 +179,7 @@ export const ContactSection: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-[#FAF8F3]/80 font-medium mb-1.5">
+                      <label className="block text-xs uppercase tracking-wider text-[#14243A] font-bold mb-1.5">
                         Full Name *
                       </label>
                       <input
@@ -232,12 +190,12 @@ export const ContactSection: React.FC = () => {
                           setFormData({ ...formData, fullName: e.target.value })
                         }
                         placeholder="e.g. Adv. Sharma"
-                        className="w-full px-4 py-2.5 rounded-sm bg-[#0E1A2B] border border-[#FAF8F3]/15 text-[#FAF8F3] placeholder:text-[#FAF8F3]/30 text-sm focus:outline-none focus:border-[#B79559] transition-colors"
+                        className="w-full px-4 py-2.5 rounded-lg bg-neutral-50 border border-neutral-300 text-[#14243A] placeholder:text-neutral-400 text-sm focus:outline-none focus:border-[#B79559] transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-[#FAF8F3]/80 font-medium mb-1.5">
+                      <label className="block text-xs uppercase tracking-wider text-[#14243A] font-bold mb-1.5">
                         Contact Mobile *
                       </label>
                       <input
@@ -248,14 +206,14 @@ export const ContactSection: React.FC = () => {
                           setFormData({ ...formData, phone: e.target.value })
                         }
                         placeholder="+91 98765 XXXXX"
-                        className="w-full px-4 py-2.5 rounded-sm bg-[#0E1A2B] border border-[#FAF8F3]/15 text-[#FAF8F3] placeholder:text-[#FAF8F3]/30 text-sm focus:outline-none focus:border-[#B79559] transition-colors"
+                        className="w-full px-4 py-2.5 rounded-lg bg-neutral-50 border border-neutral-300 text-[#14243A] placeholder:text-neutral-400 text-sm focus:outline-none focus:border-[#B79559] transition-colors"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-[#FAF8F3]/80 font-medium mb-1.5">
+                      <label className="block text-xs uppercase tracking-wider text-[#14243A] font-bold mb-1.5">
                         Email Address
                       </label>
                       <input
@@ -265,12 +223,12 @@ export const ContactSection: React.FC = () => {
                           setFormData({ ...formData, email: e.target.value })
                         }
                         placeholder="aspirant@lawmail.com"
-                        className="w-full px-4 py-2.5 rounded-sm bg-[#0E1A2B] border border-[#FAF8F3]/15 text-[#FAF8F3] placeholder:text-[#FAF8F3]/30 text-sm focus:outline-none focus:border-[#B79559] transition-colors"
+                        className="w-full px-4 py-2.5 rounded-lg bg-neutral-50 border border-neutral-300 text-[#14243A] placeholder:text-neutral-400 text-sm focus:outline-none focus:border-[#B79559] transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider text-[#FAF8F3]/80 font-medium mb-1.5">
+                      <label className="block text-xs uppercase tracking-wider text-[#14243A] font-bold mb-1.5">
                         Target Examination *
                       </label>
                       <select
@@ -278,7 +236,7 @@ export const ContactSection: React.FC = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, targetExam: e.target.value })
                         }
-                        className="w-full px-4 py-2.5 rounded-sm bg-[#0E1A2B] border border-[#FAF8F3]/15 text-[#FAF8F3] text-sm focus:outline-none focus:border-[#B79559] transition-colors"
+                        className="w-full px-4 py-2.5 rounded-lg bg-neutral-50 border border-neutral-300 text-[#14243A] text-sm focus:outline-none focus:border-[#B79559] transition-colors"
                       >
                         <option value="MP Civil Judge (Junior Division)">
                           MP Civil Judge (Junior Division)
@@ -297,7 +255,7 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-[#FAF8F3]/80 font-medium mb-1.5">
+                    <label className="block text-xs uppercase tracking-wider text-[#14243A] font-bold mb-1.5">
                       Academic Background & Questions
                     </label>
                     <textarea
@@ -307,7 +265,7 @@ export const ContactSection: React.FC = () => {
                         setFormData({ ...formData, message: e.target.value })
                       }
                       placeholder="Mention your law graduation status (LL.B. year / graduate), preferred batch timing, or specific preparation queries..."
-                      className="w-full px-4 py-2.5 rounded-sm bg-[#0E1A2B] border border-[#FAF8F3]/15 text-[#FAF8F3] placeholder:text-[#FAF8F3]/30 text-sm focus:outline-none focus:border-[#B79559] transition-colors"
+                      className="w-full px-4 py-2.5 rounded-lg bg-neutral-50 border border-neutral-300 text-[#14243A] placeholder:text-neutral-400 text-sm focus:outline-none focus:border-[#B79559] transition-colors"
                     />
                   </div>
 
@@ -315,14 +273,14 @@ export const ContactSection: React.FC = () => {
                     <Button
                       variant="gold"
                       size="lg"
-                      className="w-full justify-center"
+                      className="w-full justify-center shadow-lg"
                       icon={<Send className="w-4 h-4" />}
                     >
                       Transmit Admission Enquiry
                     </Button>
                   </div>
 
-                  <p className="text-[11px] text-[#FAF8F3]/50 text-center leading-relaxed">
+                  <p className="text-[11px] text-neutral-400 text-center leading-relaxed">
                     * The Lawgical Academy maintains strict candidate confidentiality. No third-party data sharing.
                   </p>
                 </form>
@@ -335,4 +293,3 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
-

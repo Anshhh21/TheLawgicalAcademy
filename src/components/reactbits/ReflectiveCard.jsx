@@ -8,14 +8,14 @@ import './ReflectiveCard.css';
 
 const THEMES = {
   dark: {
-    '--rc-base': '#14243A',
-    '--rc-shadow': '0 22px 44px -20px rgba(0, 0, 0, 0.8), 0 6px 16px -8px rgba(0, 0, 0, 0.5)',
+    '--rc-base': '#000000',
+    '--rc-shadow': '0 22px 44px -20px rgba(0, 0, 0, 0.9), 0 6px 16px -8px rgba(0, 0, 0, 0.7)',
     '--rc-ink': '#FAF8F3',
     '--rc-muted': 'rgba(216, 194, 148, 0.8)',
-    '--rc-tile': 'linear-gradient(180deg, #1C3352 0%, #0E1A2B 100%)',
+    '--rc-tile': 'linear-gradient(180deg, #111111 0%, #000000 100%)',
     '--rc-tile-edge': 'rgba(183, 149, 89, 0.3)',
     '--rc-tile-highlight': 'rgba(216, 194, 148, 0.25)',
-    '--rc-tile-shadow': '0 4px 10px -4px rgba(0, 0, 0, 0.7)',
+    '--rc-tile-shadow': '0 4px 10px -4px rgba(0, 0, 0, 0.8)',
     '--rc-rim': 'rgba(183, 149, 89, 0.25)',
     '--rc-rim-highlight': 'rgba(216, 194, 148, 0.35)'
   },
