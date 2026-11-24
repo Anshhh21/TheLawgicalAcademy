@@ -11,7 +11,7 @@ import { Footer } from '@/components/ui/Footer';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col bg-black text-[#FAF8F3]">
+    <main className="min-h-screen flex flex-col bg-black text-[#FAF8F3] overflow-x-clip">
       {/* 1. Global Navigation Bar */}
       <Navbar />
 

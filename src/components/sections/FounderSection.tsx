@@ -12,7 +12,7 @@ export const FounderSection: React.FC = () => {
   return (
     <section
       id="founder"
-      className="relative z-10 -mt-10 sm:-mt-14 pt-8 sm:pt-14 pb-20 sm:pb-28 bg-[#FAF8F3] text-[#14243A] overflow-visible"
+      className="relative z-10 -mt-10 sm:-mt-14 pt-8 sm:pt-14 pb-20 sm:pb-28 bg-[#FAF8F3] text-[#14243A] overflow-x-clip"
     >
       {/* Subtle Warm Glow for Depth */}
       <div className="absolute top-1/3 -right-24 w-96 h-96 bg-[#B79559]/10 rounded-full blur-3xl pointer-events-none" />
@@ -28,7 +28,7 @@ export const FounderSection: React.FC = () => {
             className="lg:col-span-5 flex flex-col items-center relative z-30 -mt-6 sm:-mt-10 lg:-mt-12"
           >
             {/* 3D Lanyard Hanging Freely from the Black Background Above */}
-            <div className="w-full h-[580px] relative">
+            <div className="w-full h-[430px] sm:h-[520px] lg:h-[580px] relative">
               <Lanyard
                 frontImage="/images/founder/founder-photo.png"
                 backImage="/images/founder/founder-photo.png"

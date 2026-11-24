@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import CircularCarousel from '@/components/reactbits/CircularCarousel';
 
 const academyPhotos = [
@@ -58,19 +59,37 @@ const academyPhotos = [
 
 export const AcademyPhotosSection: React.FC = () => {
   return (
-    <section className="pt-8 sm:pt-12 pb-6 bg-black text-[#FAF8F3] relative overflow-hidden">
+    <section className="pt-8 sm:pt-12 pb-10 sm:pb-6 bg-black text-[#FAF8F3] relative overflow-hidden">
       {/* Clean Header - Positioned Tight to Carousel */}
-      <div className="w-full text-center px-4 mb-1 sm:mb-2 relative z-10">
+      <div className="w-full text-center px-4 mb-5 sm:mb-2 relative z-10">
         <span className="text-xs uppercase tracking-[0.25em] text-[#B79559] font-bold block">
           Campus &amp; Learning Culture
         </span>
-        <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mt-1">
+        <h2 className="font-heading text-2xl sm:text-5xl font-bold text-white mt-1 leading-tight">
           Life Inside The Lawgical Academy
         </h2>
       </div>
 
-      {/* Prominent, Large Edge-to-Edge 3D Circular Carousel */}
-      <div className="w-full h-[620px] sm:h-[740px] lg:h-[800px] overflow-hidden relative -mt-4 sm:-mt-8 lg:-mt-12">
+      {/* Mobile Large Swipeable Showcase (< 640px) — Zero empty black voids */}
+      <div className="sm:hidden w-full overflow-x-auto snap-x snap-mandatory flex gap-4 px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {academyPhotos.map((item, idx) => (
+          <div
+            key={idx}
+            className="snap-center shrink-0 w-[82vw] aspect-[4/3] rounded-xl overflow-hidden border border-[#B79559]/30 bg-neutral-950 shadow-xl"
+          >
+            <Image
+              src={item.src}
+              alt={item.alt}
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Tablet & Desktop Edge-to-Edge 3D Circular Carousel (>= 640px) */}
+      <div className="hidden sm:block w-full h-[660px] lg:h-[800px] overflow-hidden relative -mt-8 lg:-mt-12">
         <CircularCarousel
           items={academyPhotos}
           preset="cylinder"

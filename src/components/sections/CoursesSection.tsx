@@ -133,9 +133,8 @@ export const CoursesSection: React.FC = () => {
             >
               <ReflectiveCard
                 palette="dark"
-                height={520}
                 radius={18}
-                className="w-full border border-[#B79559]/35 hover:border-[#B79559]/80 transition-colors shadow-2xl cursor-pointer group"
+                className="w-full min-h-[460px] sm:h-[520px] border border-[#B79559]/35 hover:border-[#B79559]/80 transition-colors shadow-2xl cursor-pointer group"
               >
                 <div className="flex flex-col justify-between h-full text-left">
                   <div>

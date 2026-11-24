@@ -52,14 +52,14 @@ export const HeroSection: React.FC = () => {
           />
         </motion.div>
 
-        {/* Coaching Name with Grand Transition Typography */}
+        {/* Coaching Name with Grand Transition Typography (Fits cleanly on all mobile widths) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="space-y-3 text-center"
+          className="space-y-3 text-center w-full max-w-full px-1"
         >
-          <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.95)]">
+          <h1 className="font-heading text-[clamp(1.35rem,5.8vw,2.5rem)] sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.95)] break-words">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-[#FAF8F3] to-[#D8C294]">
               TheLawgicalAcademy
             </span>
@@ -71,9 +71,9 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-3xl mx-auto"
+          className="max-w-3xl mx-auto px-2"
         >
-          <p className="font-heading text-xl sm:text-3xl md:text-4xl text-[#E8DCC4] font-medium leading-relaxed tracking-wide drop-shadow-md">
+          <p className="font-heading text-base sm:text-3xl md:text-4xl text-[#E8DCC4] font-medium leading-relaxed tracking-wide drop-shadow-md">
             Where Legal Knowledge Meets Judicial Aspirations
           </p>
         </motion.div>
