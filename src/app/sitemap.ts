@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}#results`,
+      url: `${baseUrl}#awards`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,

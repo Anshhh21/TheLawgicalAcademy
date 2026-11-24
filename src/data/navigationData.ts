@@ -5,7 +5,7 @@ export const navigationLinks: NavItem[] = [
   { label: 'Courses', href: '#courses' },
   { label: 'Why Lawgical', href: '#why-lawgical' },
   { label: 'Founder', href: '#founder' },
-  { label: 'Results', href: '#results' },
+  { label: 'Awards', href: '#awards' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -14,7 +14,7 @@ export const quickLinks = [
   { label: 'Courses', href: '#courses' },
   { label: 'Why Lawgical', href: '#why-lawgical' },
   { label: 'Founder', href: '#founder' },
-  { label: 'Results', href: '#results' },
+  { label: 'Awards', href: '#awards' },
   { label: 'Contact', href: '#contact' },
 ];
 

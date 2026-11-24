@@ -2,20 +2,18 @@ import { AcademyInfo } from '@/types';
 
 export const academyData: AcademyInfo = {
   name: 'The Lawgical Academy',
-  shortTagline: 'Premier Institute for Judicial & Prosecution Examination Preparation',
-  heroHeadline: 'Mastering the Law with Precision, Rigour & Logic',
+  shortTagline: 'Learn with Clarity. Prepare with Discipline. Aspire for Excellence.',
+  heroHeadline: 'TheLawgicalAcademy',
   heroSubheadline:
-    'Dedicated coaching and strategic mentorship for Civil Judge (Judiciary), ADPO (Prosecution Officers), and comprehensive legal competitive examinations. [Curriculum details awaiting final confirmation].',
-  aboutTitle: 'Empowering Future Judicial & Legal Officers',
+    'Structured, bilingual preparation for Judicial Services, MP ADPO, CLAT PG & UGC-NET Law with personal mentorship.',
+  aboutTitle: 'Building Legal Minds. Shaping Future Judicial Officers.',
   aboutP1:
-    'The Lawgical Academy is established with the vision of transforming ambitious law graduates into astute judicial and prosecution officers. With a core focus on conceptual clarity, rigorous bare act analysis, and precise answer-writing craftsmanship, our classroom environment bridges the gap between academic theory and competitive examination excellence.',
+    'Conceptualised in 2019, The Lawgical Academy launched online in 2020 and expanded into offline classroom coaching in 2021. Guided by a Quality over Quantity philosophy, it has mentored 400+ students toward conceptual mastery and analytical precision.',
   aboutP2:
-    '[ACADEMY HISTORY & ESTABLISHMENT DETAILS PENDING — This section will outline the founding vision, offline/hybrid campus footprint, and academic track record once officially verified by the academy].',
+    'Our integrated programmes prepare aspirants across MP, Chhattisgarh, Rajasthan, Delhi, Haryana, Himachal Pradesh, Bihar, Uttarakhand, and UP for Civil Judge, ADPO, CLAT PG, and UGC-NET examinations.',
   missionStatement:
-    'To deliver disciplined, exam-centric legal pedagogy that equips every aspirant with analytical precision, unwavering ethical foundation, and competitive readiness.',
+    'We do not just prepare students for an examination; we prepare them for the responsibility of the judiciary.',
   visionStatement:
-    'To become the benchmark institution in central India for Judicial Services and Public Prosecutor entrance examinations.',
-  placeholderNotice:
-    'PROTOTYPE NOTICE: Content marked in brackets [ ] represents structural placeholders awaiting official verification from The Lawgical Academy management.',
+    'To emerge as a trusted centre of excellence offering comprehensive, affordable legal education and meaningful mentorship.',
+  placeholderNotice: '',
 };
-

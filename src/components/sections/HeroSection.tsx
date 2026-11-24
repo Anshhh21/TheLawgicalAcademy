@@ -29,14 +29,29 @@ export const HeroSection: React.FC = () => {
           priority
           className="object-cover object-center filter brightness-[0.68] contrast-105 saturate-[0.85] scale-105"
         />
-        {/* Soft, Transparent Fades so Image Remains Clearly Recognizable */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/85" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_20%,_rgba(0,0,0,0.8)_95%)]" />
       </div>
 
       {/* Main Hero Content */}
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center justify-center space-y-10">
-        
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center justify-center space-y-7 sm:space-y-9">
+        {/* Official Academy Crest Blended Cleanly */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-black/85 border border-[#B79559]/50 shadow-[0_0_30px_rgba(183,149,89,0.25)] overflow-hidden flex items-center justify-center p-1.5"
+        >
+          <Image
+            src="/images/logo/academy-crest.jpg"
+            alt="The Lawgical Academy Emblem"
+            width={160}
+            height={132}
+            priority
+            className="w-full h-full object-contain mix-blend-lighten"
+          />
+        </motion.div>
+
         {/* Coaching Name with Grand Transition Typography */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, y: 15 }}
@@ -59,28 +74,28 @@ export const HeroSection: React.FC = () => {
           className="max-w-3xl mx-auto"
         >
           <p className="font-heading text-xl sm:text-3xl md:text-4xl text-[#E8DCC4] font-medium leading-relaxed tracking-wide drop-shadow-md">
-            Architects of Judicial Excellence
+            Where Legal Knowledge Meets Judicial Aspirations
           </p>
         </motion.div>
 
-        {/* Split Flap Numerical Counter Board - Flips ONCE on load, perfectly sized with zero scrollbar */}
+        {/* Split Flap Numerical Counter Board - Flips ONCE on load with verified numbers */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full pt-2 pb-2"
+          className="w-full pt-1 pb-1"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto w-full">
-            {/* Split Flap 1: Students Taught (Flips once on load to 1500+ STUDENTS and stays) */}
+            {/* Split Flap 1: Students Taught */}
             <div className="flex flex-col items-center justify-center p-5 sm:p-7 rounded-xl bg-black/85 backdrop-blur-xl border border-[#B79559]/40 shadow-[0_10px_35px_rgba(0,0,0,0.85)] group hover:border-[#B79559]/80 transition-colors overflow-hidden">
               <div className="mb-3 text-center">
                 <span className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#D8C294] font-bold">
-                  Aspirants Mentored
+                  Students Mentored Since 2019
                 </span>
               </div>
               <div className="w-full flex justify-center py-2 overflow-hidden">
                 <SplitFlapText
-                  words={['1500+ STUDENTS']}
+                  words={['400+ STUDENTS']}
                   loop={false}
                   intro={true}
                   fontSize={20}
@@ -97,16 +112,16 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Split Flap 2: Rank Holders (Flips once on load to 200+ SELECTIONS and stays) */}
+            {/* Split Flap 2: Selections */}
             <div className="flex flex-col items-center justify-center p-5 sm:p-7 rounded-xl bg-black/85 backdrop-blur-xl border border-[#B79559]/40 shadow-[0_10px_35px_rgba(0,0,0,0.85)] group hover:border-[#B79559]/80 transition-colors overflow-hidden">
               <div className="mb-3 text-center">
                 <span className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#D8C294] font-bold">
-                  Judicial &amp; ADPO Selections
+                  Selections in Last 5 Years
                 </span>
               </div>
               <div className="w-full flex justify-center py-2 overflow-hidden">
                 <SplitFlapText
-                  words={['200+ SELECTIONS']}
+                  words={['25+ SELECTIONS']}
                   loop={false}
                   intro={true}
                   fontSize={20}
@@ -130,7 +145,7 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="pt-2 flex flex-col items-center space-y-4"
+          className="pt-1 flex flex-col items-center space-y-4"
         >
           <SpecularButton
             size="large"
@@ -144,14 +159,13 @@ export const HeroSection: React.FC = () => {
             Explore Courses
           </SpecularButton>
         </motion.div>
-
       </div>
 
       {/* Subtle Scroll Down Prompt */}
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center text-white/50 cursor-pointer hover:text-[#D8C294] transition-colors"
+        className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center text-white/50 cursor-pointer hover:text-[#D8C294] transition-colors"
         onClick={handleScrollToCourses}
       >
         <span className="text-[10px] uppercase tracking-widest font-semibold mb-1">Scroll</span>

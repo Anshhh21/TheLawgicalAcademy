@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { navigationLinks } from '@/data/navigationData';
 
@@ -32,24 +33,35 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-black/90 py-3 border-b border-[#B79559]/20'
-            : 'bg-black/85 backdrop-blur-sm py-4 border-b border-white/10'
+            ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-black/90 py-2.5 border-b border-[#B79559]/20'
+            : 'bg-black/85 backdrop-blur-sm py-3.5 border-b border-white/10'
         }`}
       >
         <div className="w-full px-4 sm:px-8 lg:px-12 flex items-center justify-between">
-          
-          {/* Text Aligned to the Left - Compact & Refined */}
+          {/* Official Crest (Blended seamlessly on black header) + Brand Name Aligned Left */}
           <Link
             href="#home"
-            className="group flex flex-col text-left focus:outline-none"
+            className="group flex items-center gap-2.5 focus:outline-none"
             aria-label="The Lawgical Academy Home"
           >
-            <span className="font-heading text-sm sm:text-base font-bold tracking-wide text-white leading-tight group-hover:text-[#D8C294] transition-colors">
-              The Lawgical
-            </span>
-            <span className="text-[11px] sm:text-xs tracking-wider text-[#FAF8F3]/70 font-medium leading-none">
-              Academy
-            </span>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 relative overflow-hidden">
+              <Image
+                src="/images/logo/academy-crest.jpg"
+                alt="The Lawgical Academy Logo"
+                width={80}
+                height={66}
+                priority
+                className="w-full h-full object-contain mix-blend-lighten [mask-image:radial-gradient(closest-side,black_68%,transparent_100%)]"
+              />
+            </div>
+            <div className="flex flex-col text-left">
+              <span className="font-heading text-sm sm:text-base font-bold tracking-wide text-white leading-tight group-hover:text-[#D8C294] transition-colors">
+                The Lawgical
+              </span>
+              <span className="text-[11px] sm:text-xs tracking-wider text-[#FAF8F3]/70 font-medium leading-none">
+                Academy
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -84,20 +96,17 @@ export const Navbar: React.FC = () => {
               )}
             </button>
           </div>
-
         </div>
       </header>
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
-          {/* Backdrop */}
           <div
             className="fixed inset-0 bg-black/85 backdrop-blur-sm transition-opacity"
             onClick={() => setMobileMenuOpen(false)}
           />
 
-          {/* Drawer Menu */}
           <div className="fixed top-[60px] right-0 bottom-0 w-[75%] max-w-sm bg-black border-l border-[#B79559]/30 p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
             <div className="space-y-4">
               <div className="pb-4 border-b border-[#B79559]/20">
@@ -125,7 +134,7 @@ export const Navbar: React.FC = () => {
 
             <div className="pt-6 border-t border-white/10 text-center">
               <p className="text-[11px] text-[#FAF8F3]/60 tracking-wider">
-                Premier Judicial &amp; Legal Education
+                Quality Over Quantity • Legal Excellence
               </p>
             </div>
           </div>

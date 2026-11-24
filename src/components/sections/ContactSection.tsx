@@ -21,7 +21,7 @@ export const ContactSection: React.FC = () => {
     fullName: '',
     phone: '',
     email: '',
-    targetExam: 'MP Civil Judge (Junior Division)',
+    targetExam: 'Civil Judge Examination – Comprehensive Programme',
     message: '',
   });
 
@@ -238,17 +238,17 @@ export const ContactSection: React.FC = () => {
                         }
                         className="w-full px-4 py-2.5 rounded-lg bg-neutral-50 border border-neutral-300 text-[#14243A] text-sm focus:outline-none focus:border-[#B79559] transition-colors"
                       >
-                        <option value="MP Civil Judge (Junior Division)">
-                          MP Civil Judge (Junior Division)
+                        <option value="Civil Judge Examination – Comprehensive Programme">
+                          Civil Judge – Comprehensive (12 / 18 / 24 Months)
                         </option>
-                        <option value="MP ADPO / Prosecution Officer">
-                          MP ADPO / Prosecution Officer
+                        <option value="Judicial Mains Exclusive Practice Programme">
+                          Judicial Mains Exclusive Practice (6 Months)
                         </option>
-                        <option value="Multi-State Judicial Foundation">
-                          Multi-State Judicial Foundation
+                        <option value="MP ADPO – Complete Preparation Programme">
+                          MP ADPO – Complete Preparation (6 Months)
                         </option>
-                        <option value="Judicial Mains Answer Writing Capsule">
-                          Judicial Mains Answer Writing Capsule
+                        <option value="CLAT PG & UGC-NET Law Preparation">
+                          CLAT PG &amp; UGC-NET Law Preparation
                         </option>
                       </select>
                     </div>

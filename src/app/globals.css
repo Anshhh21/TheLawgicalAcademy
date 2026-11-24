@@ -139,6 +139,18 @@ body {
   background: #B79559;
 }
 
+/* Modal Dialog Top-Layer Scroll Containment & Backdrop */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+}
+
 /* Accessibility: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   * {

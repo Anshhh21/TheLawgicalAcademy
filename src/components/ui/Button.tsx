@@ -14,6 +14,7 @@ interface ButtonProps {
   iconPosition?: 'left' | 'right';
   target?: string;
   rel?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -27,6 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
   iconPosition = 'right',
   target,
   rel,
+  type = 'submit',
 }) => {
   const baseStyles =
     'inline-flex items-center justify-center font-medium transition-all duration-300 rounded-sm cursor-pointer select-none active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none';
@@ -70,6 +72,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      type={type}
       onClick={onClick}
       className={`${baseStyles} ${sizeStyles} ${variantStyles} ${className}`}
     >
