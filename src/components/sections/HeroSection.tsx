@@ -20,21 +20,21 @@ export const HeroSection: React.FC = () => {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 overflow-hidden bg-black"
     >
-      {/* Background Image with Balanced Faded Overlay (Clearly Visible) */}
+      {/* Background Image with Balanced Faded Overlay (Shifted up on mobile so founder's face is visible above cards) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <Image
           src="/images/main/thelawgical-hero.jpg"
           alt="The Lawgical Academy Main Campus"
           fill
           priority
-          className="object-cover object-center filter brightness-[0.68] contrast-105 saturate-[0.85] scale-105"
+          className="object-cover object-bottom sm:object-center -translate-y-16 sm:translate-y-0 filter brightness-[0.68] contrast-105 saturate-[0.85] scale-110 sm:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/85" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_20%,_rgba(0,0,0,0.8)_95%)]" />
       </div>
 
       {/* Main Hero Content */}
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center justify-center space-y-7 sm:space-y-9">
+      <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col items-center justify-center space-y-7 sm:space-y-9">
         {/* Official Academy Crest Blended Cleanly */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -52,14 +52,14 @@ export const HeroSection: React.FC = () => {
           />
         </motion.div>
 
-        {/* Coaching Name with Grand Transition Typography (Fits cleanly on all mobile widths) */}
+        {/* Coaching Name with Grand Transition Typography (Single line across mobile & desktop) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-3 text-center w-full max-w-full px-1"
         >
-          <h1 className="font-heading text-[clamp(1.35rem,5.8vw,2.5rem)] sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.95)] break-words">
+          <h1 className="font-heading text-[clamp(1.3rem,5.4vw,5.25rem)] font-black tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.95)] whitespace-nowrap">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-[#FAF8F3] to-[#D8C294]">
               TheLawgicalAcademy
             </span>

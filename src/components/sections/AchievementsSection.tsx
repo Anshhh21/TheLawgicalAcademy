@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import CircularCarousel from '@/components/reactbits/CircularCarousel';
+import { MobileAutoCarousel } from '@/components/ui/MobileAutoCarousel';
 
 const achievementPhotos = [
   {
@@ -50,23 +50,8 @@ export const AchievementsSection: React.FC = () => {
         </h2>
       </div>
 
-      {/* Mobile Large Swipeable Showcase (< 640px) — Zero empty black voids */}
-      <div className="sm:hidden w-full overflow-x-auto snap-x snap-mandatory flex gap-4 px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {achievementPhotos.map((item, idx) => (
-          <div
-            key={idx}
-            className="snap-center shrink-0 w-[82vw] aspect-[4/3] rounded-xl overflow-hidden border border-[#B79559]/30 bg-neutral-950 shadow-xl"
-          >
-            <Image
-              src={item.src}
-              alt={item.alt}
-              width={800}
-              height={600}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
+      {/* Mobile Large Auto-Advancing Carousel (< 640px) — Moves every 1.5s */}
+      <MobileAutoCarousel items={achievementPhotos} intervalMs={1500} />
 
       {/* Tablet & Desktop Edge-to-Edge 3D Circular Carousel (>= 640px) */}
       <div className="hidden sm:block w-full h-[680px] lg:h-[820px] overflow-hidden relative -mt-8 lg:-mt-12">
