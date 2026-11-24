@@ -2,27 +2,28 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { contactData } from '@/data/contactData';
 
 export const WhatsAppButton: React.FC = () => {
+  // Do not render floating WhatsApp widget until official WhatsApp link is provided
+  if (!contactData.whatsappNumber) {
+    return null;
+  }
+
   return (
     <div className="fixed bottom-6 right-6 z-50 group flex items-center gap-3">
-      {/* Tooltip */}
       <span className="hidden sm:inline-block px-3 py-1.5 rounded-full bg-[#14243A] text-white text-xs font-medium shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none border border-[#B79559]/30">
         Chat with Admissions
       </span>
 
-      {/* WhatsApp Floating Button */}
       <Link
-        href="https://wa.me/919500207811?text=Hello%20The%20Lawgical%20Academy%2C%20I%20would%20like%20to%20enquire%20about%20Judiciary%20%26%20ADPO%20coaching."
+        href={`https://wa.me/${contactData.whatsappNumber}?text=${encodeURIComponent(contactData.whatsappMessage)}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact The Lawgical Academy on WhatsApp"
         className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 active:scale-95 transition-transform duration-200 ease-out focus:outline-hidden focus:ring-4 focus:ring-[#25D366]/40"
       >
-        {/* Radar ping ring */}
         <span className="absolute -inset-1 rounded-full bg-[#25D366]/40 animate-ping pointer-events-none" />
-
-        {/* WhatsApp SVG Icon */}
         <svg
           className="w-8 h-8 fill-current relative z-10"
           viewBox="0 0 24 24"
@@ -34,4 +35,3 @@ export const WhatsAppButton: React.FC = () => {
     </div>
   );
 };
-

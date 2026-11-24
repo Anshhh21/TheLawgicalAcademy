@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, BookOpen, GraduationCap, User, Compass } from 'lucide-react';
 import { founderData } from '@/data/founderData';
+import { FOUNDER_LINKEDIN_URL } from '@/data/contactData';
 import { Button } from '@/components/ui/Button';
 import Lanyard from '@/components/reactbits/Lanyard';
 
@@ -132,7 +133,7 @@ export const FounderSection: React.FC = () => {
             </div>
 
             {/* Actions */}
-            <div className="pt-1 flex flex-wrap items-center gap-4">
+            <div className="pt-1 flex flex-wrap items-center gap-3 sm:gap-4">
               <Button href="#contact" variant="gold" size="md">
                 Schedule Mentorship Session
               </Button>
@@ -143,6 +144,16 @@ export const FounderSection: React.FC = () => {
                 className="border-[#14243A]/40 text-[#14243A] hover:bg-[#14243A]/5 font-semibold"
               >
                 Explore Batches
+              </Button>
+              <Button
+                href={FOUNDER_LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="ghost"
+                size="md"
+                className="border border-[#0A66C2]/30 text-[#0A66C2] hover:bg-[#0A66C2]/10 font-semibold"
+              >
+                LinkedIn Profile
               </Button>
             </div>
           </motion.div>

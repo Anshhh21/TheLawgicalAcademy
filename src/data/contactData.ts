@@ -1,24 +1,26 @@
 import { ContactInfo } from '@/types';
 
-export const contactData: ContactInfo = {
-  phonePrimary: '+91 95002 07811',
-  phoneSecondary: '+91 95000 25216',
-  whatsappNumber: '+919500207811',
-  whatsappMessage: 'Hello, I would like to enquire about admission and course batches at The Lawgical Academy.',
-  emailPrimary: 'info@thelawgicalacademy.in',
-  emailEnquiries: 'admissions@thelawgicalacademy.in',
-  addressLine1: 'Academy Campus Address',
-  addressLine2: 'To be updated upon confirmation',
-  cityStateZip: 'India',
-  operatingHours: 'Monday – Saturday: 9:00 AM – 7:00 PM (Sunday Closed)',
-  googleMapsUrl: 'https://maps.google.com',
-  googleMapsEmbedQuery: 'Indore, Madhya Pradesh',
-  socials: {
-    youtube: '#',
-    telegram: '#',
-    instagram: '#',
-    linkedin: '#',
-  },
-  isPlaceholder: true,
-};
+export const FOUNDER_LINKEDIN_URL = 'https://www.linkedin.com/in/ankur-samadhiya-112704382/';
 
+export const contactData: ContactInfo = {
+  phonePrimary: '+91 91116 32832',
+  phoneSecondary: '',
+  whatsappNumber: '',
+  whatsappMessage:
+    'Hello The Lawgical Academy, I would like to enquire about Judiciary & ADPO coaching.',
+  emailPrimary: '',
+  emailEnquiries: '',
+  addressLine1: 'E-32, Opposite Hill View Apartment, Near Mukundanand Ashram',
+  addressLine2: 'Harishankar Puram, Shiram Colony, Lashkar',
+  cityStateZip: 'Gwalior, Madhya Pradesh 474002',
+  operatingHours: 'Opens 8:30 AM (Gwalior Campus)',
+  googleMapsUrl: 'https://share.google/3fOIfbSmdq0nmJOCC',
+  googleMapsEmbedQuery:
+    'The Lawgical academy, E-32, Harishankar Puram, Shiram Colony, Lashkar, Gwalior, Madhya Pradesh 474002',
+  socials: {
+    youtube: 'https://www.youtube.com/@NyayaSaar',
+    instagram: 'https://www.instagram.com/nyaya_saar?dmpr=ZDNlZDc0MzIxNw==',
+    linkedin: 'https://www.linkedin.com/company/nyaya-saar',
+  },
+  isPlaceholder: false,
+};

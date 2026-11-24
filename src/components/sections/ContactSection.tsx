@@ -6,7 +6,8 @@ import {
   Phone,
   Mail,
   Clock,
-  MessageSquare,
+  MapPin,
+  ExternalLink,
   Send,
   CheckCircle,
 } from 'lucide-react';
@@ -75,8 +76,25 @@ export const ContactSection: React.FC = () => {
                     <span className="text-[11px] uppercase tracking-wider text-[#8B6E38] font-bold block">
                       Telephone / Helpdesk
                     </span>
-                    <p className="text-xs text-neutral-400 italic mt-1">
-                      Contact numbers to be updated
+                    <a
+                      href="tel:+919111632832"
+                      className="text-sm text-[#14243A] font-semibold hover:text-[#B79559] transition-colors mt-1 inline-block"
+                    >
+                      {contactData.phonePrimary}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-neutral-100 border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase tracking-wider text-[#8B6E38] font-bold block">
+                      Gwalior Campus Address
+                    </span>
+                    <p className="text-xs sm:text-sm text-[#14243A] font-medium mt-1 leading-relaxed">
+                      {contactData.addressLine1}, {contactData.addressLine2}, {contactData.cityStateZip}
                     </p>
                   </div>
                 </div>
@@ -110,20 +128,20 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* WhatsApp Quick Connect Button */}
-              <div className="pt-4 border-t border-neutral-100">
+              {/* Google Maps Directions Button */}
+              <div className="pt-4 border-t border-neutral-100 space-y-2.5">
                 <Button
-                  href={`https://wa.me/?text=${encodeURIComponent(contactData.whatsappMessage)}`}
+                  href={contactData.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="gold"
-                  className="w-full justify-center bg-[#25D366] text-[#0A1320] hover:bg-[#1EBE5D] border-none font-semibold shadow-md"
-                  icon={<MessageSquare className="w-4 h-4" />}
+                  className="w-full justify-center shadow-md"
+                  icon={<ExternalLink className="w-4 h-4" />}
                 >
-                  Connect via WhatsApp Desk
+                  Open Location on Google Maps
                 </Button>
-                <p className="text-[10px] text-center text-neutral-400 mt-2">
-                  * Opens WhatsApp with pre-filled admission query
+                <p className="text-[10px] text-center text-neutral-500">
+                  4.9★ Rated (155 Google Reviews) • Gwalior, Madhya Pradesh
                 </p>
               </div>
             </div>
