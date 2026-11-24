@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Phone,
-  Mail,
   Clock,
   MapPin,
   ExternalLink,
@@ -95,20 +94,6 @@ export const ContactSection: React.FC = () => {
                     </span>
                     <p className="text-xs sm:text-sm text-[#14243A] font-medium mt-1 leading-relaxed">
                       {contactData.addressLine1}, {contactData.addressLine2}, {contactData.cityStateZip}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-neutral-100 border border-[#B79559]/40 flex items-center justify-center text-[#B79559] shrink-0">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] uppercase tracking-wider text-[#8B6E38] font-bold block">
-                      Electronic Mail
-                    </span>
-                    <p className="text-xs text-neutral-400 italic mt-1">
-                      Official email to be updated
                     </p>
                   </div>
                 </div>

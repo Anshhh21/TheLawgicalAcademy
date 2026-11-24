@@ -8,7 +8,6 @@ import { FounderSection } from '@/components/sections/FounderSection';
 import { AchievementsSection } from '@/components/sections/AchievementsSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/ui/Footer';
-import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
 export default function HomePage() {
   return (
@@ -37,11 +36,8 @@ export default function HomePage() {
       {/* 8. Contact & Admission Enquiry Form */}
       <ContactSection />
 
-      {/* 9. Academy Global Footer (VLS Structure) */}
+      {/* 9. Academy Global Footer */}
       <Footer />
-
-      {/* 10. Floating WhatsApp Chat Widget */}
-      <WhatsAppButton />
     </main>
   );
 }

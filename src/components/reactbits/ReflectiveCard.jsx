@@ -920,8 +920,8 @@ const ReflectiveCard = ({
     >
       <div ref={bodyRef} className="reflective-card__body">
         <canvas ref={canvasRef} className="reflective-card__canvas" />
-        <video ref={videoRef} className="reflective-card__video" loop muted playsInline autoPlay src={videoSrc} />
-        <video ref={camRef} className="reflective-card__video reflective-card__video--cam" playsInline muted />
+        <video ref={videoRef} className="reflective-card__video" loop muted playsInline autoPlay src={videoSrc} suppressHydrationWarning />
+        <video ref={camRef} className="reflective-card__video reflective-card__video--cam" playsInline muted suppressHydrationWarning />
         <div className="reflective-card__content">
           {children ? (
             children
