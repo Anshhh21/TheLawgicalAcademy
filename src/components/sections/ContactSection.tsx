@@ -7,13 +7,13 @@ import {
   Clock,
   MapPin,
   ExternalLink,
+  MessageSquare,
   Send,
   CheckCircle,
 } from 'lucide-react';
 import { contactData } from '@/data/contactData';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { PlaceholderBadge } from '@/components/ui/PlaceholderBadge';
 
 export const ContactSection: React.FC = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -25,8 +25,23 @@ export const ContactSection: React.FC = () => {
     message: '',
   });
 
+  const buildWhatsAppEnquiryUrl = () => {
+    const lines = [
+      'Hello The Lawgical Academy, I would like to submit an admission enquiry:',
+      `• Name: ${formData.fullName}`,
+      `• Mobile: ${formData.phone}`,
+      formData.email ? `• Email: ${formData.email}` : null,
+      `• Target Exam: ${formData.targetExam}`,
+      formData.message ? `• Query: ${formData.message}` : null,
+    ].filter(Boolean);
+
+    return `https://wa.me/${contactData.whatsappNumber}?text=${encodeURIComponent(lines.join('\n'))}`;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const url = buildWhatsAppEnquiryUrl();
+    window.open(url, '_blank', 'noopener,noreferrer');
     setFormSubmitted(true);
   };
 
@@ -113,14 +128,24 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Google Maps Directions Button */}
+              {/* WhatsApp & Google Maps Buttons */}
               <div className="pt-4 border-t border-neutral-100 space-y-2.5">
+                <Button
+                  href={`https://wa.me/${contactData.whatsappNumber}?text=${encodeURIComponent(contactData.whatsappMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="gold"
+                  className="w-full justify-center bg-[#25D366] text-[#0A1320] hover:bg-[#1EBE5D] border-none font-semibold shadow-md"
+                  icon={<MessageSquare className="w-4 h-4" />}
+                >
+                  Chat on WhatsApp
+                </Button>
                 <Button
                   href={contactData.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  variant="gold"
-                  className="w-full justify-center shadow-md"
+                  variant="outline"
+                  className="w-full justify-center border-[#B79559]/50 text-[#14243A] hover:bg-[#B79559]/10"
                   icon={<ExternalLink className="w-4 h-4" />}
                 >
                   Open Location on Google Maps
@@ -133,7 +158,7 @@ export const ContactSection: React.FC = () => {
 
           </motion.div>
 
-          {/* Right Column: Admission Enquiry Interactive Form Mockup */}
+          {/* Right Column: Admission Enquiry WhatsApp Form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -143,18 +168,11 @@ export const ContactSection: React.FC = () => {
           >
             <div className="bg-white rounded-2xl p-6 sm:p-10 border border-neutral-200/90 shadow-lg">
               <div className="mb-8">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-heading text-2xl font-bold text-[#14243A]">
-                    Submit Admission Enquiry
-                  </h3>
-                  <PlaceholderBadge
-                    label="Active UI Form"
-                    variant="pill"
-                    className="bg-[#B79559]/15 text-[#8B6E38] border-[#B79559]/40"
-                  />
-                </div>
+                <h3 className="font-heading text-2xl font-bold text-[#14243A]">
+                  Submit Admission Enquiry
+                </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 mt-1">
-                  Fill in your academic profile to receive detailed course prospectuses and schedule an orientation session.
+                  Fill in your academic profile and send your enquiry directly to our admissions desk on WhatsApp.
                 </p>
               </div>
 
@@ -164,19 +182,33 @@ export const ContactSection: React.FC = () => {
                     <CheckCircle className="w-8 h-8" />
                   </div>
                   <h4 className="font-heading text-xl font-bold text-[#14243A]">
-                    Enquiry Registered Successfully
+                    Enquiry Ready on WhatsApp
                   </h4>
                   <p className="text-xs sm:text-sm text-neutral-600 max-w-md mx-auto leading-relaxed">
-                    Thank you, <span className="text-[#8B6E38] font-bold">{formData.fullName || 'Candidate'}</span>. In this prototype preview, this form validates your input and demonstrates the admissions capture interface.
+                    Thank you, <span className="text-[#8B6E38] font-bold">{formData.fullName || 'Candidate'}</span>. Your enquiry details have been formatted for WhatsApp. If WhatsApp didn&apos;t open automatically, tap below:
                   </p>
-                  <Button
-                    onClick={() => setFormSubmitted(false)}
-                    variant="outline"
-                    size="sm"
-                    className="text-[#14243A] border-[#14243A]"
-                  >
-                    Submit Another Query
-                  </Button>
+                  <div className="flex flex-wrap items-center justify-center gap-3">
+                    <Button
+                      href={buildWhatsAppEnquiryUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="gold"
+                      size="sm"
+                      className="bg-[#25D366] text-[#0A1320] hover:bg-[#1EBE5D] border-none font-semibold"
+                      icon={<MessageSquare className="w-4 h-4" />}
+                    >
+                      Open WhatsApp Chat
+                    </Button>
+                    <Button
+                      type="button"
+                      onClick={() => setFormSubmitted(false)}
+                      variant="outline"
+                      size="sm"
+                      className="text-[#14243A] border-[#14243A]"
+                    >
+                      Submit Another Query
+                    </Button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">

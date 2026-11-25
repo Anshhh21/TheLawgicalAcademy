@@ -5,7 +5,7 @@ export const FOUNDER_LINKEDIN_URL = 'https://www.linkedin.com/in/ankur-samadhiya
 export const contactData: ContactInfo = {
   phonePrimary: '+91 91116 32832',
   phoneSecondary: '',
-  whatsappNumber: '',
+  whatsappNumber: '919111632832',
   whatsappMessage:
     'Hello The Lawgical Academy, I would like to enquire about Judiciary & ADPO coaching.',
   emailPrimary: '',
