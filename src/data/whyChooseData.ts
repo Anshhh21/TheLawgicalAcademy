@@ -11,9 +11,9 @@ export const whyChooseData: WhyChooseItem[] = [
   },
   {
     id: 'proven-selections',
-    title: '25+ Selections & 400+ Students',
+    title: '50+ Selections & 400+ Students',
     description:
-      'Trusted by over 400 learners since inception, backed by 25+ selections in judicial and competitive law exams over the last 5 years.',
+      'Trusted by over 400 learners since inception, backed by 50+ selections in judicial and competitive law exams over the last 5 years.',
     iconName: 'Award',
     isPendingVerification: false,
   },

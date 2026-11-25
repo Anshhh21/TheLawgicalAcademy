@@ -121,7 +121,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="w-full flex justify-center py-2 overflow-hidden">
                 <SplitFlapText
-                  words={['25+ SELECTIONS']}
+                  words={['50+ SELECTIONS']}
                   loop={false}
                   intro={true}
                   fontSize={20}
