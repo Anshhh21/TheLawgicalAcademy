@@ -54,6 +54,11 @@ const academyPhotos = [
     src: '/images/academy/academy-10.png',
     alt: 'Life at The Lawgical Academy',
     title: 'Academy Life'
+  },
+  {
+    src: '/images/academy/academy-11.jpg',
+    alt: 'The Lawgical Academy Student Cohort & Campus Gathering',
+    title: 'Academy Cohort'
   }
 ];
 

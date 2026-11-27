@@ -34,6 +34,11 @@ const achievementPhotos = [
     src: '/images/ach/ach-6.png',
     alt: 'Award Ceremony & Academic Accolade',
     title: 'Academic Accolade'
+  },
+  {
+    src: '/images/ach/ach-7.jpg',
+    alt: 'Founder Ankur Samadhiya Receiving Indian Educator Award',
+    title: 'Indian Educator Award'
   }
 ];
 
